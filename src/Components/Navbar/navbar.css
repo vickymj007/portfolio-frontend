@@ -1,0 +1,80 @@
+.navbar {
+    height: 5rem;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: rgb(30, 30, 30);
+}
+.desktop_menu_list{
+    margin: 1rem;
+    cursor: pointer;
+}
+.desktop_menu_list:hover{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+}
+.desktop_menu_btn{
+    padding: 1rem 2rem;
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: block;
+}
+
+.desktop_menu_btn svg{
+    vertical-align: middle;
+}
+.active{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+}
+.navbar > svg{
+    font-size: 1.5rem;
+    color: yellow;
+    cursor: pointer;
+    display: none;
+}
+.nav_menu {
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    height: fit-content;
+    min-width: 15rem;
+    background-color: rgb(40, 40, 40);
+    border-radius: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.nav_menu_list{
+    color: white;
+    margin: 0.25rem;
+    background-color: rgb(30, 30, 30);
+    padding: 0.5rem 3rem;
+}
+.desktop_menu{
+    display: block;
+}
+
+@media screen and (max-width:720px){
+    .navbar > svg{
+        display: flex;
+    }
+    .desktop_menu{
+        display: none;
+    }
+    .desktop_menu_btn{
+        display: none;
+    }
+}
