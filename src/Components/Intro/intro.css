@@ -9,11 +9,15 @@
 
 .bg{
     position: absolute;
-    top: -2rem;
-    right: 0;
+    /* top: -2rem; */    
+    /* right: 0; */
+    /* height: 100vh; */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50vh;
+    right: 10rem;
     z-index: -1;
     object-fit: cover;
-    height: 100vh;
 }
 .intro_content {
     height: 100vh;
@@ -44,6 +48,10 @@
     border: none;
     background-color: white;
     border-radius: 2rem;
+    color: black;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: small;
 }
 
 @media screen and (max-width:840px) {

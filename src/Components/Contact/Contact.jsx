@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './contact.css'
-import { FaGithub, FaFacebook, FaInstagram, FaLinkedin  } from "react-icons/fa";
+import { FaGithub, FaLinkedin  } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -38,9 +38,9 @@ const Contact = () => {
             <textarea name="message" rows="5" placeholder='Your Message'></textarea>
             <button>Submit</button>
             <div className='social_media'>
-                <FaFacebook onClick={()=>handleClick("https://www.facebook.com/vicky.viperrr/")}/>
+                {/* <FaFacebook onClick={()=>handleClick("https://www.facebook.com/vicky.viperrr/")}/> */}
                 <FaGithub onClick={()=>handleClick("https://github.com/vickymj007")}/>
-                <FaInstagram onClick={()=>handleClick("https://www.instagram.com/vicky_m_j/")}/>
+                {/* <FaInstagram onClick={()=>handleClick("https://www.instagram.com/vicky_m_j/")}/> */}
                 <FaLinkedin onClick={()=>handleClick("https://www.linkedin.com/in/vignesh-m-780423132/")}/>
             </div>
         </form>

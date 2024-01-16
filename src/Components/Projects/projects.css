@@ -32,36 +32,78 @@
 .project_list{
     background-color: rgb(50, 50, 50);
     border-radius: 1rem;
-    height: 20rem;
+    height: 21rem;
     width: 15rem;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
-.project_list_front {
-    border-radius: 1rem;
+.project_list_head {
+    height: 50%;
+    position: relative;
+}
+.project_list_head img {
+    object-fit: cover;
     height: 100%;
-    /* position: relative; */
-    padding: 1rem;
+    width: 100%;
+}
+.project_list_head > p {
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgb(50, 50, 50);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.50rem;
+    border-radius: 8px 8px 0 0;
+}
+.project_list_body {
+    padding: 0.5rem;
     display: flex;
+    height: 50%;
     flex-direction: column;
     justify-content: space-between;
 }
-
-.project_list_front h2 {
-    font-size: 1.3rem;
-    margin: 1rem 0;
+.project_list_body h2 {
+    font-size: 1rem;
+    margin: 0.25rem 0;
     color: yellow;
 }
-.project_list_front > div p {
-    font-size: smaller;
+.project_list_body p {
+    font-size: 0.70rem;
     cursor: pointer;
 }
-.project_list_front > div p:hover {
+.project_list_body p:hover {
     color: yellow;
 }
-.project_list_front > div a {
+.project_list_body   a {
     display: inline-block;
     border-radius: 0.5rem;
     width: 100%;
     margin: 0.25rem 0;
+}
+.project_list_desc {
+    position: absolute;
+    padding: 1rem;
+    background-color: black;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+
+.project_list_desc button {
+    border: none;
+    outline: none;
+    background-color: yellow;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.project_list_desc p {
+    font-size: 0.70rem;
 }
 
 .website_link {
@@ -76,40 +118,31 @@
     padding: 0.3rem 0.75rem;
 }
 
-/* .project_list_front > img {
-    border-radius: 1rem;
-    height: 20rem;
-    width: 15rem;
-    overflow: hidden;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    filter: brightness(30%);
-} */
-
-.project_list_front a {
+.project_list_body a {
     color: white;
-
 }
 
 @media screen and (max-width:580px){
     .project_list{
         width: 38vw;
-        height: calc(38vw + 25px);
+        height: calc(45vw + 75px);
+        
     }
-    .project_list_front h2 {
+    .project_list_body h2 {
         font-size: 3vw;
         margin: 4px 0;
     }
-    .project_list_front > div p {
+    .project_list_body p {
         font-size: 2vw;
     }
-    .project_list_front > div a {
+    .project_list_body  a {
         margin: 0.25rem 0;
         font-size: 2vw;
     }
-    
+    .project_list_desc p{
+        font-size: 2vw;
+    }
+    .project_list_head > p {
+        font-size: 1.5vw;
+    }
 }

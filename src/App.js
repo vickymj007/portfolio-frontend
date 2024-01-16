@@ -1,4 +1,6 @@
 import Contact from "./Components/Contact/Contact";
+import Education from "./Components/Education/Education.jsx";
+import Experience from "./Components/Experience/Experience.jsx";
 import Intro from "./Components/Intro/Intro";
 import Navbar from "./Components/Navbar/Navbar";
 import Projects from "./Components/Projects/Projects.jsx";
@@ -11,6 +13,8 @@ function App() {
       <Intro/>
       <Skills/>
       <Projects/>
+      <Education/>
+      <Experience/>
       <Contact/>
     </div>
   );

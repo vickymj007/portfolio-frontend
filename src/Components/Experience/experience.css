@@ -1,0 +1,83 @@
+#experience {
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 65rem;
+    text-align: center;
+    padding:0 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work_heading {
+    font-size: 3rem;
+    margin: 1.5rem 0;
+}
+.work_heading span {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+.work_container{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.work_list {
+    position: relative;
+    max-width: 25rem;
+    border-radius: 0.5rem;
+    background-color: rgb(50, 50, 50);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+.work_list h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.designation {
+    background-color: black;
+    padding: 0.25rem 0.5rem;
+    font-size: small;
+    border-radius: 0.5rem;
+}
+.designation svg {
+    vertical-align: middle;
+}
+.work_period {
+    position: absolute;
+    border-radius: 0 .5rem .5rem 0;
+    font-size: small;
+    padding: .25rem .5rem;
+    bottom: 1rem;
+    left: 0;
+}
+.work_list > span {
+    position: absolute;
+    top: -15px;
+    font-size: x-small;
+    background-color: rgb(30, 30, 30);
+    padding: .5rem;
+    border-radius: 1rem;
+}
+.work_role {
+    font-size: x-small;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+    .work_heading {
+        font-size: 2rem;
+    }
+    .work_container{
+        gap: 2rem;
+        margin: 0 1rem;
+    }
+}
