@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 1rem;
 }
 .skill_title{
     font-size: 3rem;
@@ -34,8 +35,29 @@
     margin: 4rem 0;
 }
 .skill_icons .skill_icon_list {
-    min-width: 10rem;
+    width: 11rem;
     background-color: rgb(50, 50, 50);
     padding: 1rem 2rem;
     border-radius: 1rem;
+}
+
+@media screen and (max-width:480px){
+    .skill_icon_list img{
+        height: 1.2rem;
+    }
+    .skill_icon_list p {
+        font-size: smaller;
+    }
+    .skill_icons .skill_icon_list {
+        width: 8rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+    .skill_desc{
+        font-size: 0.7rem;
+        padding: 0 0.5rem;
+    }
+    .skill_icons{
+        margin: 2rem 0;
+    }
 }

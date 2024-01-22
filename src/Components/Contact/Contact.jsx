@@ -11,6 +11,9 @@ const Contact = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
+        if(e.target.from_name.value === "" || e.target.from_mail.value === "" || e.target.message.value === ""){
+            return toast.error("Please fill out all the fields")
+        }
         emailjs.sendForm('service_kat8l3k','template_x1eoout', form.current, "hwMd5wwtAWcMOdknf")
             .then((response) => {
                 e.target.reset()
@@ -38,9 +41,7 @@ const Contact = () => {
             <textarea name="message" rows="5" placeholder='Your Message'></textarea>
             <button>Submit</button>
             <div className='social_media'>
-                {/* <FaFacebook onClick={()=>handleClick("https://www.facebook.com/vicky.viperrr/")}/> */}
                 <FaGithub onClick={()=>handleClick("https://github.com/vickymj007")}/>
-                {/* <FaInstagram onClick={()=>handleClick("https://www.instagram.com/vicky_m_j/")}/> */}
                 <FaLinkedin onClick={()=>handleClick("https://www.linkedin.com/in/vignesh-m-780423132/")}/>
             </div>
         </form>

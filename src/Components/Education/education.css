@@ -14,85 +14,101 @@
     font-size: 3rem;
     margin: 1rem 0;
 }
-.education_wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+
+.course_name {
+    margin: 0.25rem 0;
+    width: fit-content;
+    background-color: rgb(1, 1, 1);
+    padding: 0.25rem .5rem;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
 }
-.education_list{
-    display: flex;
-    gap: 0.25rem;
-}
-.list_head {
-    background-color: yellow;
-    color: black;
-    min-width: 15rem;
-    min-height: 7rem;
-    padding: .25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.list_body {
+
+
+/* Sliding Window Styles */
+.sliding_window {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 2rem 0;
     background-color: rgb(50, 50, 50);
-    min-width: 27rem;
-    padding: 1rem;
-    text-align: start;
+    box-shadow: -5px 5px 4px 4px rgba(0, 0, 0, 0.3);
 }
-.list_head > h3 {
-    font-weight: 400;
+.sliding_window nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: black;
+    min-height: 3rem;
+    transition: .3s;
 }
-.list_head > h3 span {
-    vertical-align: middle;
-    font-size: small;
+.sliding_window nav p {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem 1rem 0 0;
 }
-.list_body > h3 {
+.activeNav{
+    background-color: rgb(50, 50, 50);
+    position: relative;
+}
+.activeNav::before,
+.activeNav::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    bottom: 0;
+}
+.activeNav::before{
+    left: calc(1rem * -1);
+    border-radius: 0 0 100vw 0;
+    box-shadow: 5px 5px 0 5px rgb(50, 50, 50);
+}
+
+.activeNav::after{
+    right: calc(1rem * -1);
+    border-radius: 0 0 0 100vw;
+    box-shadow: -5px 5px 0 5px rgb(50, 50, 50);
+}
+
+.sliding_window_body {
+    padding: 4rem 2rem;
+    color: black;
+    min-height: 13rem;
+}
+
+.sliding_window_body h3{
     font-size: medium;
     font-weight: 500;
     color: yellow;
 }
-.list_body p {
-    font-size: small;
-}
-.course_name {
-    margin: 0.25rem 0;
-    width: fit-content;
-    background-color: rgb(26, 26, 26);
-    padding: 0.25rem .5rem;
-    border-radius: 2px;
-    display: inline-block;
-}
-.list_body span {
+
+.sliding_window_body span {
     font-size: x-small;
+    color: white;
     vertical-align: middle;
 }
-
+.sliding_window_body > h3 span {
+    vertical-align: middle;
+    font-size: small;
+}
+.sliding_window_body p {
+    font-size: small;
+}
 @media screen and (max-width:720px){
-    .education_list{
-        flex-direction: column;
-        gap: 0;
-        flex-wrap: wrap;
+    .sliding_window nav p {
+        font-size: small;
+        cursor: default;
     }
-    .list_head{
-        min-height: 3rem;
-        min-width: 80vw;
-    }
-    .list_body{
-        min-width: 80vw;
-    }
-    .education_wrapper{
-        gap: 0.5rem;
-    }
-    .list_body p, .list_body span {
+    .sliding_window_body p, .sliding_window_body span {
         font-size: 2vw;
     }
-    .list_body > h3 {
+    .sliding_window_body > h3 {
         font-size: 3vw;
     }
-    .list_head > h3 {
-        font-size: 4vw;
-    }
-    .list_head > h3 span {
-        font-size: 2vw;
+    .sliding_window_body > h3 span {
+        font-size: smaller;
     }
 }

@@ -5,6 +5,7 @@
     text-align: center;
     padding:0 1rem;
     margin: 0 auto;
+    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,10 +75,16 @@
 
 @media screen and (max-width: 580px) {
     .work_heading {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .work_container{
         gap: 2rem;
         margin: 0 1rem;
+    }
+    .work_list h3 {
+        font-size: medium;
+    }
+    .designation, .work_period {
+        font-size: x-small;
     }
 }

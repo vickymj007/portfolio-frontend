@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './projects.css'
 import { projects } from './data'
 
 const Projects = () => {
-  const [showDesc, setShowDesc] = useState(false)
+  
 
   return (
     <section id='projects'>
@@ -19,14 +19,26 @@ const Projects = () => {
               <div className="project_list_body">
                 <h2>{project.name}</h2>
                 <div>
-                  <p onClick={()=>setShowDesc(true)}>View Description</p>
+                  {/* <p className='show_desc'>View Description</p> */}
                   <a href={project.deployedURL} target='blank' className='website_link'>Visit Website</a><br/>
-                  <a href={project.githubURL} target='blank' className='github_link'>GitHub Code</a>
+                  <p className='github_link'>
+                    GitHub Code
+                    {project.projectType === "Fullstack Project" ?
+                      <div className='github_link_popup'>
+                        <a href={project.githubFE} target='blank' >Frontend</a>
+                        <a href={project.githubBE} target='blank' >Backend</a>
+                      </div>
+                    :
+                      <div className='github_link_popup frontend'>
+                        <a href={project.githubFE} target='blank' >Frontend</a>
+                      </div>
+                    }
+                  </p>
                 </div>
               </div>
-              <div className='project_list_desc' style={{top:showDesc? 0 : "-12rem", bottom:showDesc ? 0 : "35rem"}}>
+              <div className='project_list_desc'>
                 <p>{project.description}</p>
-                <button onClick={()=>setShowDesc(false)}>Close</button>
+                <button className='close_desc'>Close</button>
               </div>
             </div>
           ))}

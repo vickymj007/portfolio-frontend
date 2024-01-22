@@ -15,7 +15,7 @@
     font-size: 3rem;
 }
 .project_desc {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
     margin-bottom: 1rem;
     max-width: 45rem;
@@ -76,7 +76,7 @@
 .project_list_body p:hover {
     color: yellow;
 }
-.project_list_body   a {
+.project_list_body div > a {
     display: inline-block;
     border-radius: 0.5rem;
     width: 100%;
@@ -86,6 +86,8 @@
     position: absolute;
     padding: 1rem;
     background-color: black;
+    top: -12rem;
+    bottom: 35rem;
     left: 0;
     right: 0;
     display: flex;
@@ -93,7 +95,10 @@
     justify-content: space-between;
     transition: 0.3s;
 }
-
+.project_list_body p:hover .project_list_desc {
+    top: 0;
+    bottom: 0;
+}
 
 .project_list_desc button {
     border: none;
@@ -116,6 +121,30 @@
     font-size: small;
     background-color: black;
     padding: 0.3rem 0.75rem;
+    position: relative;
+    border-radius: 0.25rem;
+}
+.github_link_popup {
+    position: absolute;
+    top: -3.2rem;
+    background-color: black;
+    left: 16rem;
+    border-radius: 0.25rem;
+    right: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+.github_link_popup.frontend{
+    top: -2.1rem;
+    height: 2rem;
+}
+.github_link:hover .github_link_popup{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.github_link_popup a:hover{
+    color: yellow;
 }
 
 .project_list_body a {
@@ -126,7 +155,7 @@
     .project_list{
         width: 38vw;
         height: calc(45vw + 75px);
-        
+        border-radius: .5rem;
     }
     .project_list_body h2 {
         font-size: 3vw;
@@ -144,5 +173,18 @@
     }
     .project_list_head > p {
         font-size: 1.5vw;
+    }
+    .project_desc {
+        font-size: 0.7rem;
+    }
+    .github_link_popup {
+        top: -2.6rem;
+    }
+    .github_link_popup.frontend{
+        top: -1.6rem;
+        height: 1.5rem;
+    }
+    .project_list_body p {
+        cursor: default;
     }
 }
