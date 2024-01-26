@@ -14,7 +14,7 @@
     /* height: 100vh; */
     top: 50%;
     transform: translateY(-50%);
-    height: 50vh;
+    height: 25rem;
     right: 10rem;
     z-index: -1;
     object-fit: cover;
