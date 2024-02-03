@@ -31,19 +31,18 @@
     position: relative;
     max-width: 25rem;
     border-radius: 0.5rem;
-    background-color: rgb(50, 50, 50);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-small);
+    border: var(--border-light);
 }
 .work_list h3 {
     font-size: 1.5rem;
     font-weight: 400;
 }
 .designation {
-    background-color: black;
     padding: 0.25rem 0.5rem;
     font-size: small;
     border-radius: 0.5rem;
@@ -63,9 +62,9 @@
     position: absolute;
     top: -15px;
     font-size: x-small;
-    background-color: rgb(30, 30, 30);
     padding: .5rem;
     border-radius: 1rem;
+    border: var(--border-light);
 }
 .work_role {
     font-size: x-small;

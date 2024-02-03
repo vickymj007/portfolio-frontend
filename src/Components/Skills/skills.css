@@ -24,22 +24,27 @@
     max-width: 51rem;
 }
 .skill_icon_list img {
-    height: 2rem;
+    height: 1.2rem;
 }
 .skill_icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 4rem 0;
 }
 .skill_icons .skill_icon_list {
-    width: 11rem;
-    background-color: rgb(50, 50, 50);
-    padding: 1rem 2rem;
-    border-radius: 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: var(--border-light);
 }
+
 
 @media screen and (max-width:480px){
     .skill_icon_list img{
@@ -49,7 +54,7 @@
         font-size: smaller;
     }
     .skill_icons .skill_icon_list {
-        width: 8rem;
+        width: 9rem;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
     }

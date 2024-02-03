@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './projects.css'
-import { projects } from './data'
+import { data } from './data'
 
-const Projects = () => {
-  
+const Projects = ({styles}) => {
+  const [projects, setProjects] = useState(data)
+
+  const toggleDesc = (id)=>{
+    setProjects(prevVal => {
+      return prevVal.map(project => {
+        if(project.id === id){
+          return {...project, showDesc: !project.showDesc}
+        }else{
+          return project
+        }
+      })
+    })
+  }
 
   return (
     <section id='projects'>
@@ -11,15 +23,15 @@ const Projects = () => {
         <span className='project_desc'>I take pride in paying attention to the smallest details and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help business achieve their goals and create a strong online presence.</span>
         <div className="project_demo">
           {projects.map(project =>(
-            <div className="project_list" key={project.id}>
+            <div className="project_list" key={project.id} style={styles.secondary}>
               <div className="project_list_head">
                 <img src={project.img} alt="Project background" />
-                <p>{project.projectType}</p>
+                <p style={styles.secondary}>{project.projectType}</p>
               </div>
               <div className="project_list_body">
                 <h2>{project.name}</h2>
                 <div>
-                  {/* <p className='show_desc'>View Description</p> */}
+                  <p className='show_desc' onClick={()=>toggleDesc(project.id)}>View Description</p>
                   <a href={project.deployedURL} target='blank' className='website_link'>Visit Website</a><br/>
                   <p className='github_link'>
                     GitHub Code
@@ -36,9 +48,9 @@ const Projects = () => {
                   </p>
                 </div>
               </div>
-              <div className='project_list_desc'>
+              <div className='project_list_desc' style={{top:project.showDesc ? 0 : "-12rem" ,bottom: project.showDesc? 0 : "35rem"}}>
                 <p>{project.description}</p>
-                <button className='close_desc'>Close</button>
+                <button onClick={()=>toggleDesc(project.id)} className='close_desc'>Close</button>
               </div>
             </div>
           ))}

@@ -3,7 +3,7 @@ import ims from '../../Assets/ims.png'
 import gmail from '../../Assets/gmailclone.png'
 import usjobs from '../../Assets/githubusjobs.png'
 
-export const projects = [
+export const data = [
     {
         id:1,
         name:"Stack overflow clone",
@@ -12,6 +12,7 @@ export const projects = [
         githubBE:"https://github.com/vickymj007/Stack-Overflow-Clone-BE.git",
         projectType:"Fullstack Project",
         img: stackoverflow,
+        showDesc:false,
         description:"This is a Stack Overflow clone project, User can create an account and ask their programming related questions. User can also see the questions asked by others."
     },
     {
@@ -22,6 +23,7 @@ export const projects = [
         githubBE:"https://github.com/vickymj007/Gmail_clone_server.git",
         projectType:"Fullstack Project",
         img:gmail,
+        showDesc:false,
         description:"This is a Gmail Clone created using the MERN Stack, User can create account and send emails to other users."
     },
     {
@@ -31,6 +33,7 @@ export const projects = [
         githubFE:"https://github.com/vickymj007/GitHub-US-Jobs",
         projectType:"Frontend Project",
         img:usjobs,
+        showDesc:false,
         description:"This is a Frontend Project created using React, User can login and search US Jobs."
     },
     {
@@ -41,6 +44,7 @@ export const projects = [
         githubBE:"https://github.com/vickymj007/IMS_Backend.git",
         projectType:"Fullstack Project",
         img:ims,
+        showDesc:false,
         description:"This is a Fullstack project, You can perform CRUD Operation like adding a New Influencer, Edit and Delete. There is a search bar where you can search Influencer by their name, You can also sort data."
     }
 ]

@@ -18,10 +18,8 @@
 .course_name {
     margin: 0.25rem 0;
     width: fit-content;
-    background-color: rgb(1, 1, 1);
     padding: 0.25rem .5rem;
     border-radius: 2px;
-    color: white;
     display: inline-block;
 }
 
@@ -32,63 +30,57 @@
     border-radius: 1rem;
     overflow: hidden;
     margin: 2rem 0;
-    background-color: rgb(50, 50, 50);
-    box-shadow: -5px 5px 4px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-large);
+    border: var(--border-light);
 }
 .sliding_window nav {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    background-color: black;
     min-height: 3rem;
     transition: .3s;
 }
 .sliding_window nav p {
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     border-radius: 1rem 1rem 0 0;
 }
 .activeNav{
-    background-color: rgb(50, 50, 50);
     position: relative;
 }
-.activeNav::before,
-.activeNav::after{
-    content: "";
-    background-color: black;
+.before,
+.after{
     position: absolute;
     width: 1rem;
     height: 1rem;
     bottom: 0;
 }
-.activeNav::before{
+.before{
     left: calc(1rem * -1);
     border-radius: 0 0 100vw 0;
-    box-shadow: 5px 5px 0 5px rgb(50, 50, 50);
 }
 
-.activeNav::after{
+.after{
     right: calc(1rem * -1);
     border-radius: 0 0 0 100vw;
-    box-shadow: -5px 5px 0 5px rgb(50, 50, 50);
+    box-shadow: -5px 5px 0 5px rgb(255, 255, 255);
 }
 
 .sliding_window_body {
     padding: 4rem 2rem;
-    color: black;
     min-height: 13rem;
 }
 
 .sliding_window_body h3{
     font-size: medium;
     font-weight: 500;
-    color: yellow;
+    color: var(--orange-color);
 }
 
 .sliding_window_body span {
     font-size: x-small;
-    color: white;
-    vertical-align: middle;
+    padding-left: 2px;
+    vertical-align:baseline;
 }
 .sliding_window_body > h3 span {
     vertical-align: middle;

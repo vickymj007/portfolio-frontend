@@ -9,15 +9,14 @@
 
 .bg{
     position: absolute;
-    /* top: -2rem; */    
-    /* right: 0; */
-    /* height: 100vh; */
     top: 50%;
     transform: translateY(-50%);
     height: 25rem;
     right: 10rem;
-    z-index: -1;
     object-fit: cover;
+    z-index: 1;
+    box-shadow: var(--shadow-large);
+    border-radius: 50%;
 }
 .intro_content {
     height: 100vh;
@@ -28,18 +27,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 2;
 }
 .hello {
     font-size: 1.75rem;
     font-weight: 100;
 }
 .intro_name{
-    color: yellow;
+    color: var(--orange-color);
+    z-index: 2;
+}
+.intro_text{
+    z-index: 2;
+
 }
 .intro_para {
     font-size: medium;
     font-weight: 300;
     letter-spacing: 1px;
+    z-index: 2;
 }
 .resume_btn{
     width: fit-content;
@@ -52,6 +58,8 @@
     cursor: pointer;
     font-weight: 400;
     font-size: small;
+    box-shadow: var(--shadow-small);
+    border: var(--border-light);
 }
 
 @media screen and (max-width:840px) {

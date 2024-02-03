@@ -6,11 +6,11 @@
     text-align: center;
 }
 .contact_heading{
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     font-size: 3rem;
 }
 .contact_desc {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1rem;
     margin-bottom: 1rem;
     max-width: 45rem;
@@ -30,19 +30,18 @@
     padding: 0.5rem 1rem;
     margin: 1rem;
     font-size: medium;
-    border: none;
-    color: white;
-    background-color: rgb(40, 40, 40);
+    border: var(--border-light);
     border-radius: 0.5rem;
+    box-shadow: var(--shadow-small);
 }
 
 .contact_form button {
-    background-color: white;
-    border: none;
     padding: 0.75rem 3.5rem;
     border-radius: 0.5rem;
     margin: 2rem;
     cursor: pointer;
+    border: var(--border-light);
+    box-shadow: var(--shadow-small);
 }
 .social_media{
     display: flex;

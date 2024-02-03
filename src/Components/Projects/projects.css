@@ -30,12 +30,12 @@
     gap: 1rem;
 }
 .project_list{
-    background-color: rgb(50, 50, 50);
     border-radius: 1rem;
     height: 21rem;
     width: 15rem;
     overflow: hidden;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-small);
+    border: var(--border-light);
     position: relative;
 }
 .project_list_head {
@@ -52,10 +52,12 @@
     bottom: -10px;
     right: 50%;
     transform: translateX(50%);
-    background-color: rgb(50, 50, 50);
     padding: 0.2rem 0.5rem;
     font-size: 0.50rem;
-    border-radius: 8px 8px 0 0;
+    /* border-radius: 8px 8px 0 0; */
+    border-radius: 8px;
+    /* box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4); */
+    border: var(--border-light);
 }
 .project_list_body {
     padding: 0.5rem;
@@ -63,22 +65,22 @@
     height: 50%;
     flex-direction: column;
     justify-content: space-between;
+    border-top: 0.2px solid rgba(50, 50, 50, 0.3);
 }
 .project_list_body h2 {
     font-size: 1rem;
     margin: 0.25rem 0;
-    color: yellow;
 }
 .project_list_body p {
     font-size: 0.70rem;
     cursor: pointer;
 }
 .project_list_body p:hover {
-    color: yellow;
+    color: var(--orange-color);
 }
 .project_list_body div > a {
     display: inline-block;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     width: 100%;
     margin: 0.25rem 0;
 }
@@ -86,8 +88,6 @@
     position: absolute;
     padding: 1rem;
     background-color: black;
-    top: -12rem;
-    bottom: 35rem;
     left: 0;
     right: 0;
     display: flex;
@@ -103,17 +103,18 @@
 .project_list_desc button {
     border: none;
     outline: none;
-    background-color: yellow;
+    background-color: var(--orange-color);
     border-radius: 0.25rem;
     cursor: pointer;
 }
 .project_list_desc p {
     font-size: 0.70rem;
+    color: white;
 }
 
 .website_link {
     font-size: small;
-    background-color: yellow;
+    background-color: var(--orange-color);
     color: black !important;
     padding: 0.3rem 0.75rem;
 }
@@ -121,6 +122,7 @@
     font-size: small;
     background-color: black;
     padding: 0.3rem 0.75rem;
+    color: white;
     position: relative;
     border-radius: 0.25rem;
 }
@@ -144,7 +146,7 @@
     opacity: 1;
 }
 .github_link_popup a:hover{
-    color: yellow;
+    color: var(--orange-color);
 }
 
 .project_list_body a {
@@ -171,8 +173,13 @@
     .project_list_desc p{
         font-size: 2vw;
     }
+    .close_desc{
+        font-size: 2vw;
+        padding: 0.25rem;
+    }
     .project_list_head > p {
         font-size: 1.5vw;
+        /* font-size: 2vw; */
     }
     .project_desc {
         font-size: 0.7rem;

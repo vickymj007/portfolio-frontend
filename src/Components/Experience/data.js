@@ -14,9 +14,9 @@ export const experience = [
         companyName : "MiraMed Ajuba Private Limited, Chennai",
         designation:"Process associate",
         startDate:"Aug-2023",
-        endDate:"Currently working here",
+        endDate:"Jan-2024",
         industry:"Healthcare/Medical billing",
-        currentlyWorking:true,
+        currentlyWorking:false,
         role:"This is my 2nd company and i joined here as a Experienced AR Representative, I Workflow is the same as my Previous Company, I'll need to find out the reason for denial of the claims and work towards getting payment for those claims."
     }
 ]
