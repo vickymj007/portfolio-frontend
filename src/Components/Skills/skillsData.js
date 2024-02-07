@@ -5,6 +5,9 @@ import nodelogo from '../../Assets/node.png'
 import reactlogo from '../../Assets/react.png'
 import tailwindlogo from '../../Assets/tailwind.png'
 import mongodblogo from '../../Assets/mongodb.png'
+import typescript from '../../Assets/Typescript_logo.png'
+import reactQuery from '../../Assets/react-query-logo.png'
+import redux from '../../Assets/redux-logo.png'
 
 export const data = [
     {
@@ -19,27 +22,43 @@ export const data = [
     },
     {
         id:3,
+        name:"Tailwind CSS",
+        icon:tailwindlogo
+    },
+    {
+        id:4,
         name:"Javascript",
         icon:jslogo
     },
     {
-        id:4,
+        id:5,
+        name:"Typescript",
+        icon:typescript
+    },
+    {
+        id:6,
         name:"React",
         icon:reactlogo
     },
     {
-        id:5,
+        id:7,
+        name:"React Query",
+        icon:reactQuery
+    },
+    {
+        id:8,
+        name:"Redux",
+        icon:redux
+    },
+    {
+        id:9,
         name:"NodeJS",
         icon:nodelogo
     },
     {
-        id:6,
+        id:10,
         name:"MongoDB",
         icon:mongodblogo
     },
-    {
-        id:7,
-        name:"Tailwind CSS",
-        icon:tailwindlogo
-    },
+    
 ]
